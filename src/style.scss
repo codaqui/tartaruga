@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap');
+
+:root {
+  --font-family: 'Walter Turncoat', cursive;
+  
+  --color-primary: #ffc107;
+  --color-secondary: #212529;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-success: #28a745;
+  --color-danger: #dc3545;
+  --color-light: #f8f9fa;
+  --color-dark: #343a40;
+
+  --font-large: 1.6rem;
+  --font-medium: 1.3rem;
+  --font-small: 1rem;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font: var(--font-medium) var(--font-family);
+  
+  color: var(--color-secondary);
+}
+
+form {
+  width: 250px;
+}
+
+input, select, button {
+  font: var(--font-small) var(--font-family);
+}
+
+button {
+  background-color: #f9f9f9;
+  padding: 4px 12px;
+}
+
+fieldset, button {
+  margin: 0;
+  border-width: 2px;
+  border-radius: 6px;
+  border-style: solid;
+}
+
+legend {
+  display: flex;
+  padding: 0 8px;
+}
+
+output > pre {
+  font-size: var(--font-small);
+}
+
+
+.flex {
+  display: flex;
+  
+  &.fill {
+    flex: 1;
+  }
+
+  &.column {
+    flex-direction: column;
+  }
+
+  &.row {
+    flex-direction: row;
+  }
+
+  &.wrap {
+    flex-wrap: wrap;
+  }
+  
+  &.center-center {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.align-start {
+    align-items: flex-start;
+  }
+
+  &.align-end {
+    align-items: flex-end;
+  }
+
+  &.align-stretch {
+    align-items: stretch;
+  }
+
+  &.justify {
+    justify-content: flex-start;
+  }
+
+  &.justify-end {
+    justify-content: flex-end;
+  }
+
+  &.justify-stretch {
+    justify-content: stretch;
+  }
+
+  &.justify-between {
+    justify-content: space-between;
+  }
+
+  &.gap-6 {
+    gap: 6px;
+  }
+  &.gap-12 {
+    gap: 12px;
+  }
+  &.gap-18 {
+    gap: 18px;
+  }
+  &.gap-24 {
+    gap: 24px;
+  }
+  &.gap-30 {
+    gap: 30px;
+  }
+}

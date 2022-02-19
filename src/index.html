@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="main.ts"></script>
+  <link rel="stylesheet" href="style.scss">
+  <title>Santa Tartaruga - Codaqui</title>
+</head>
+
+<body>
+  
+  <main class="flex row gap-30">
+    <canvas id="myCanvas" width="800" height="800" style="border:1px solid #d3d3d3;">
+      Seu navegador não tem suporte ao elemento canvas.
+    </canvas>
+    <form class="flex column gap-24">
+      <header class="flex column gap-18">
+        <section class="flex column gap-12">
+          <label for="action">Ação</label>
+          <select name="action" id="action" autofocus required>
+            <option value="">- Selecione uma ação -</option>
+            <option value="move">Mover</option>
+            <option value="rotate">Girar</option>
+          </select>
+        </section>
+  
+        <div id="container-option"> </div>
+      </header>
+ 
+      <footer class="flex row gap-6 justify-between">
+        <button type="reset" id="btn-reset" tabindex="-1">Limpar</button>
+        <button type="submit" id="btn-start">Iniciar</button>
+      </footer>
+ 
+      <output>
+        <pre></pre>
+      </output>
+    </form>
+  </main>
+
+  <template id="rotate__options">
+    <section class="flex row gap-6">
+      <input type="number" name="angle" required class="flex fill" id="angle" min="1" max="360" value="0">
+      <label for="angle">graus</label>
+    </section>
+
+    <fieldset>
+      <legend>no sentido</legend>
+
+      <section class="flex column">
+        <label>
+          <input type="radio" name="direction" required value="clockwise">
+          horário
+        </label>
+        <label>
+          <input type="radio" name="direction" required value="counterClockwise">
+          anti-horário
+        </label>
+    </fieldset>
+  </template>
+
+  <template id="move__options">
+    <section class="flex row gap-6">
+      <input type="number" name="px" required class="flex fill" id="px" min="1" max="600" value="0">
+      <label for="px">pixels</label>
+    </section>
+
+    <fieldset>
+      <legend>para</legend>
+
+      <section class="flex column">
+        <label>
+          <input type="radio" name="direction" required value="forward">
+          frente
+        </label>
+        <label>
+          <input type="radio" name="direction" required value="backward">
+          trás
+        </label>
+    </fieldset>
+
+  </template>
+</body>
+
+</html>
